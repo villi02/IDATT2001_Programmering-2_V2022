@@ -4,9 +4,15 @@ import java.util.stream.IntStream;
 
 public class DeckOfCards {
 
+    /**
+     * Initializing variables
+     */
     private final char[] suit = {'S', 'H', 'D', 'C'};
-    ArrayList<PlayingCard> cardDeck;
+    ArrayList<PlayingCard> cardDeck = new ArrayList<>();
 
+    /**
+     * A method to initialize a deck of cards
+     */
     public DeckOfCards(){
         for (char c : suit) {
             IntStream.range(1, 14).forEach(i -> {
@@ -16,6 +22,11 @@ public class DeckOfCards {
 
     }
 
+    /**
+     * A method to deal a hand with n cards
+     * @param n the amount of cards to be dealt as an int
+     * @return a hand of cards as an ArrayList<PlayingCard>
+     */
     public ArrayList<PlayingCard> dealHand(int n){
         ArrayList<PlayingCard> cards = new ArrayList<>();
         Random rand = new Random();
