@@ -16,6 +16,10 @@ public class handOfCards {
         this.handOfCards = deck.dealHand(n);
     }
 
+    public handOfCards(ArrayList<PlayingCard> cards){
+        this.handOfCards = cards;
+    }
+
     /**
      * A method to check if a hand has a flush
      * @return true if there's a flush
@@ -49,7 +53,7 @@ public class handOfCards {
      * A method to check for every card of hearts
      * @return the cards of heart as a string
      */
-    public String checkSuitOfCards() {
+    public String checkForHeart() {
         char suit = 'H';
         return this.handOfCards.stream().filter(s-> s.getSuit() == suit).collect(Collectors.toList()).toString();
     }

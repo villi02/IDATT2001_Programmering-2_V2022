@@ -32,6 +32,8 @@ public class Flushtest {
         cards.add(new PlayingCard('S', 11));
         cards.add(new PlayingCard('C', 6));
         cards.add(new PlayingCard('C', 8));
+        cards.add(new PlayingCard('H', 8));
+        cards.add(new PlayingCard('H', 4));
     }
 
     // List<String> collect = staff.stream().map(x -> x.getName()).collect(Collectors.toList());
@@ -70,6 +72,11 @@ public class Flushtest {
         return sum;
     }
 
+    public static String checkSuitOfCards() {
+        char suit = 'H';
+        return cards.stream().filter(s-> s.getSuit() == suit).collect(Collectors.toList()).toString();
+    }
+
     public static void main(String[] args) {
     Flushtest test = new Flushtest();
     Flushtest.testData();
@@ -77,5 +84,7 @@ public class Flushtest {
         System.out.println(Flushtest.hasFlush(Flushtest.mapHand(test.cards)));
         System.out.println(Flushtest.sumOfFaces(test.cards));
         System.out.println(test.DeckOfCards());
+        System.out.println("test string " + String.valueOf(69) );
+        System.out.println(Flushtest.checkSuitOfCards());
     }
 }

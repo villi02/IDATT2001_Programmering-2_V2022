@@ -1,24 +1,46 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import java.io.IOException;
-
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 public class CardGameController {
-    private Scene scene;
-    private Stage stage;
+    /**
+     * Initialize elements
+     */
+    @FXML
+    public TextField cardsDealtField;
 
-    public void startCardGame(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/CardGameScene.fxml"));
-        DeckOfCards deckOfCards = new DeckOfCards();
-        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    @FXML
+    public TextField amountOfCards;
+
+    @FXML
+    public TextField sumOfFacesField;
+
+    @FXML
+    public TextField cardOfHeartsField;
+
+    @FXML
+    public TextField queenSpadesField;
+
+    @FXML
+    public TextField flushField;
+
+    DeckOfCards deck = new DeckOfCards();
+
+    /**
+     * A method to deal hand and update all the text fields
+     * @param event the event
+     */
+    public void dealHand(ActionEvent event) {
+        int n = Integer.parseInt(amountOfCards.getText());
+        handOfCards handOfCards = new handOfCards(deck.dealHand(n));
+        // Update all fields
+        sumOfFacesField.setText(String.valueOf(handOfCards.sumOfFaces()));
+        cardOfHeartsField.setText(handOfCards.checkForHeart());
+        flushField.setText(String.valueOf(handOfCards.checkFlush()));
+        queenSpadesField.setText(String.valueOf(handOfCards.checkForQueen()));
+
     }
+
 }
 
