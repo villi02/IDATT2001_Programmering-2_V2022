@@ -37,7 +37,7 @@ public class DeckOfCards {
         ArrayList<PlayingCard> cards = new ArrayList<>();
         Random rand = new Random();
         while (cards.size() < n){
-            PlayingCard newCard = this.cardDeck.get(rand.nextInt(13-1) + 1);
+            PlayingCard newCard = this.cardDeck.get(rand.nextInt(52-1) + 1);
             if (!cards.contains(newCard)){
                 cards.add(newCard);
             }

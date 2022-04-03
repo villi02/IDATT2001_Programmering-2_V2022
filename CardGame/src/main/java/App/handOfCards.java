@@ -65,10 +65,14 @@ public class handOfCards {
      */
     public boolean checkForQueen(){
         PlayingCard queen = new PlayingCard('S', 12);
-        if (this.handOfCards.stream().filter(x -> x.equals(queen)).count() > 0){
+        if (this.handOfCards.stream().filter(x -> x.getAsString().equals(queen.getAsString())).count() == 1){
             return true;
         }
         return false;
+    }
+
+    public String getHand() {
+        return this.handOfCards.stream().collect(Collectors.toList()).toString();
     }
 
 }

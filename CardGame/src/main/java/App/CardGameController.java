@@ -41,6 +41,7 @@ public class CardGameController {
         cardOfHeartsField.setText(handOfCards.checkForHeart());
         flushField.setText(String.valueOf(handOfCards.checkFlush()));
         queenSpadesField.setText(String.valueOf(handOfCards.checkForQueen()));
+        cardsDealtField.setText(handOfCards.getHand());
 
     }
 }
