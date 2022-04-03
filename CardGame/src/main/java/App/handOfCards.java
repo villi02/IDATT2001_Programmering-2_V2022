@@ -71,6 +71,10 @@ public class handOfCards {
         return false;
     }
 
+    /**
+     * A method to get the current hand of cards
+     * @return the hand of cards as a String
+     */
     public String getHand() {
         return this.handOfCards.stream().collect(Collectors.toList()).toString();
     }
