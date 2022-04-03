@@ -54,5 +54,16 @@ public class handOfCards {
         return this.handOfCards.stream().filter(s-> s.getSuit() == suit).collect(Collectors.toList()).toString();
     }
 
+    /**
+     * A method to check for Queen of spades
+     * @return
+     */
+    public boolean checkForQueen(){
+        PlayingCard queen = new PlayingCard('S', 12);
+        if (this.handOfCards.stream().filter(x -> x.equals(queen)).count() > 0){
+            return true;
+        }
+        return false;
+    }
 
 }
