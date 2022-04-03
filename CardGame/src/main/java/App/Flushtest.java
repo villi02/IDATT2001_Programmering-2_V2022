@@ -1,6 +1,7 @@
+package App;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.sql.Array;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -50,7 +51,7 @@ public class Flushtest {
         }
 
 
-        //HashMap<PlayingCard, Integer> mapped =  list.stream().map(x -> x.getSuit()).map;
+        //HashMap<App.PlayingCard, Integer> mapped =  list.stream().map(x -> x.getSuit()).map;
         return counts;
     }
 

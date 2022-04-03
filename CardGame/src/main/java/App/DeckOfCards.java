@@ -1,3 +1,5 @@
+package App;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.IntStream;
@@ -22,10 +24,14 @@ public class DeckOfCards {
 
     }
 
+    public ArrayList<PlayingCard> getCardDeck() {
+        return this.cardDeck;
+    }
+
     /**
      * A method to deal a hand with n cards
      * @param n the amount of cards to be dealt as an int
-     * @return a hand of cards as an ArrayList<PlayingCard>
+     * @return a hand of cards as an ArrayList<App.PlayingCard>
      */
     public ArrayList<PlayingCard> dealHand(int n){
         ArrayList<PlayingCard> cards = new ArrayList<>();

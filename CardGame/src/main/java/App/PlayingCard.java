@@ -1,5 +1,6 @@
+package App;
 
-    /**
+/**
      * Represents a playing card. A playing card has a number (face) between
      * 1 and 13, where 1 is called an Ace, 11 = Knight, 12 = Queen and 13 = King.
      * The card can also be one of 4 suits: Spade, Heart, Diamonds and Clubs.
@@ -13,7 +14,7 @@
         private final int face; // a number between 1 and 13
 
         /**
-         * Creates an instance of a PlayingCard with a given suit and face.
+         * Creates an instance of a App.PlayingCard with a given suit and face.
          *
          * @param suit The suit of the card, as a single character. 'S' for Spades,
          *             'H' for Heart, 'D' for Diamonds and 'C' for clubs

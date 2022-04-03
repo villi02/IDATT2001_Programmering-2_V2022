@@ -1,6 +1,7 @@
+package App;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 public class CardGameController {
@@ -29,6 +30,7 @@ public class CardGameController {
 
     /**
      * A method to deal hand and update all the text fields
+     *
      * @param event the event
      */
     public void dealHand(ActionEvent event) {
@@ -41,6 +43,4 @@ public class CardGameController {
         queenSpadesField.setText(String.valueOf(handOfCards.checkForQueen()));
 
     }
-
 }
-
